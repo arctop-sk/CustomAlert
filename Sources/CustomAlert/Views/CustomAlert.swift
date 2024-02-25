@@ -50,6 +50,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                     Spacer()
                 }
             }
+            .background(configuration.alertBackgroundColor)
         }
         .captureSize($viewSize)
         .onAppear {
