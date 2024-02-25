@@ -26,7 +26,8 @@ extension CustomAlertConfiguration {
         public var spacing: CGFloat = 4
         /// The alignment of the content of the alert view
         public var alignment: CustomAlertAlignment = .center
-        
+        /// The background color of the alert
+        public var alertBackgroundColor: Color = Color(red: 0.94, green: 0.91, blue: 0.87)
         /// Create a custom configuration
         /// - Parameter configure: Callback to change the default configuration
         ///
