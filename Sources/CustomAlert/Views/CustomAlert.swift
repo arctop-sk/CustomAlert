@@ -120,7 +120,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                 .scrollViewDisabled(fitInScreen)
             }
             .frame(height: height)
-            .background(configuration.alert.alertBackgroundColor)
+            
             _VariadicView.Tree(ContentLayout(), content: actions)
                 .modifier(AlertButton(isPresented: $isPresented))
                 .captureSize($actionsSize)
@@ -130,6 +130,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
         .cornerRadius(configuration.alert.cornerRadius)
         .padding(configuration.padding)
         .transition(configuration.transition)
+        .background(configuration.alert.alertBackgroundColor)
         .animation(.default, value: isPresented)
     }
 }
