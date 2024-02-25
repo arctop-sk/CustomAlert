@@ -105,7 +105,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                             .multilineTextAlignment(configuration.alert.textAlignment)
                             .frame(maxWidth: .infinity, alignment: configuration.alert.frameAlignment)
                     }
-                    .background(configuration.alert.alertBackgroundColor)
+                    
                     .foregroundColor(.primary)
                     .padding(configuration.alert.padding)
                     .frame(maxWidth: .infinity)
@@ -120,7 +120,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                 .scrollViewDisabled(fitInScreen)
             }
             .frame(height: height)
-            
+            .background(configuration.alert.alertBackgroundColor)
             _VariadicView.Tree(ContentLayout(), content: actions)
                 .modifier(AlertButton(isPresented: $isPresented))
                 .captureSize($actionsSize)
