@@ -126,11 +126,11 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                 .captureSize($actionsSize)
         }
         .frame(minWidth: minWidth, maxWidth: maxWidth)
+        .background(configuration.alert.alertBackgroundColor)
         .background(BackgroundView(background: configuration.alert.background))
         .cornerRadius(configuration.alert.cornerRadius)
         .padding(configuration.padding)
         .transition(configuration.transition)
-        .background(configuration.alert.alertBackgroundColor)
         .animation(.default, value: isPresented)
     }
 }
