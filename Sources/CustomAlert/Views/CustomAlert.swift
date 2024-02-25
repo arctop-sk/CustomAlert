@@ -50,7 +50,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                     Spacer()
                 }
             }
-            .background(configuration.alert.alertBackgroundColor)
+            
         }
         .captureSize($viewSize)
         .onAppear {
@@ -105,6 +105,7 @@ struct CustomAlert<Content, Actions>: View where Content: View, Actions: View {
                             .multilineTextAlignment(configuration.alert.textAlignment)
                             .frame(maxWidth: .infinity, alignment: configuration.alert.frameAlignment)
                     }
+                    .background(configuration.alert.alertBackgroundColor)
                     .foregroundColor(.primary)
                     .padding(configuration.alert.padding)
                     .frame(maxWidth: .infinity)
